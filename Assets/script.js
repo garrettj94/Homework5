@@ -1,15 +1,23 @@
 var container = document.querySelector(".container");
 var currentDay = document.getElementById("#currentDay");
-
-var titleEl = $("<h1>");
-titleEl.text("Hello friends");
+var timeBlock = document.querySelector(".time-block")
+var saveBtn = document.querySelector(".saveBtn")
+var time 
 
 
 var today = moment() 
 $("#currentDay").text(today.format("MMMM Do, YYYY"))
 
+saveBtn.addEventListener("click")
 
-// for(i=9; i => 17; i++) {
+
+function container(){
+$("<table>")
+for(i=1; i => 24; i++);
+
+
+} 
+
      
 // }
 
