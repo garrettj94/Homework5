@@ -26,10 +26,9 @@ textarea {
 }
 
 .time-block {
-  /* text-align: center; */
+  text-align: center;
   border-radius: 15px;
-  border: solid;
-  width: 100%;
+  border-right: solid;
 }
 
 .row {
@@ -73,6 +72,3 @@ textarea {
   
 }
 
-.textbox{
- justify-content: center;
-}
