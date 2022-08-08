@@ -3,15 +3,19 @@ var currentDay = document.getElementById("#currentDay");
 var timeBlock = $(".time-block")
 var saveBtn = $(".saveBtn")
 var textArea = $("textarea")
-var hour =$(".hour")
+var hours = $(".hour")
 
 
 
 var today = moment() 
 $("#currentDay").text(today.format("MMMM Do, YYYY"))
  
+var currentTime = moment().format('HHmm');
 
 
+var past = past < currentTime;
+
+var future = future < currentTime;
 
 
 saveBtn.on("click" , function(event){
@@ -20,40 +24,33 @@ saveBtn.on("click" , function(event){
 })
 
 
-function setClasses(){
-
-    var time = moment().format('H');
-    var past = past < time;
-    var present = time;
-    var future = future < time;
-
-    console.log(present)    
-    console.log(currentTime)
+// function setClasses(){S
 
 
-    for(i=0; i < timeBlock.length; i++){
-    console.log(timeBlock[i])
-    }
-    if(timeBlock[0]){
-        
-    }
 
-}
+//     for(i=0; i < timeBlock.length; i++){
+//     console.log(timeBlock[i])
+//     }
+  
+
+// }
 
 function backgroundColorEdit(){
-    if (present == time){
-        document.getElementsByClassName("backgroundTool").style.backgroundColor = "#ff0000";
-    }else if (present < time){
-        document.getElementsByClassName("backgroundTool").style.backgroundColor = "#d3d3d3";
+    if (hours === currentTime){
+        document.getElementsById("").style.backgroundColor = "#ff0000";
+    }else if (hours < currentTime){
+        document.getElementById("").style.backgroundColor = "#d3d3d3";
     }else 
     {
-        document.getElementsByClassName("backgroundTool").style.backgroundColor = "#90ee90";
+        document.getElementsById("").style.backgroundColor = "#90ee90";
     }
 }
 
-setClasses()   
+ 
 
 
+console.log(currentTime)
+console.log(hours)
 
 
 // javascript set class
