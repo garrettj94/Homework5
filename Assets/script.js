@@ -1,93 +1,61 @@
 var container = document.querySelector(".container");
 var currentDay = document.getElementById("#currentDay");
-var timeBlock = document.querySelector(".time-block")
-var saveBtn = document.querySelector(".saveBtn")
-var textArea = document.querySelector("textarea")
+var timeBlock = $(".time-block")
+var saveBtn = $(".saveBtn")
+var textArea = $("textarea")
+var hour =$(".hour")
+
 
 
 var today = moment() 
 $("#currentDay").text(today.format("MMMM Do, YYYY"))
-
-
-function textArea() {
-    
-}
+ 
 
 
 
-saveBtn.addEventListener("click" , function(event){
+
+saveBtn.on("click" , function(event){
     event.preventDefault();
-
+    localStorage.setItem();
 })
 
 
-function timeBlock(){
-   
+function setClasses(){
 
-for(i=9; i => 5; i++);
+    var time = moment().format('H');
+    var past = past < time;
+    var present = time;
+    var future = future < time;
 
-
-} 
-
-     
-
-
-// document.getElementById('table_to_highlight')
-//             .addEventListener('click', function(item) {
-
-//             })
-
-//        // To get tr tag 
-//                 // In the row where we click
-//                 var row = item.path[1];
-  
-//                 var row_value = "";
-  
-//                 for (var j = 0; j < row.cells.length; j++) {
-  
-//                     row_value += row.cells[j].innerHTML;
-//                     row_value += " | ";
-//                 }
-  
-//                 alert(row_value);
-  
-//                 // Toggle the highlight
-//                 if (row.classList.contains('highlight'))
-//                     row.classList.remove('highlight');
-//                 else
-//                     row.classList.add('highlight');
+    console.log(present)    
+    console.log(currentTime)
 
 
-// function formatDate(date) {
-//     var d = new Date(date);
-//     var hh = d.getHours();
-//     var m = d.getMinutes();
-//     var s = d.getSeconds();
-//     var dd = "AM";
-//     var h = hh;
-//     if (h >= 12) {
-//       h = hh - 12;
-//       dd = "PM";
-//     }
-//     if (h == 0) {
-//       h = 12;
-//     }
-//     m = m < 10 ? "0" + m : m;
-  
-//     s = s < 10 ? "0" + s : s;
-  
-//     /* if you want 2 digit hours:
-//     h = h<10?"0"+h:h; */
-  
-//     var pattern = new RegExp("0?" + hh + ":" + m + ":" + s);
-  
-//     var replacement = h + ":" + m;
-//     /* if you want to add seconds
-//     replacement += ":"+s;  */
-//     replacement += " " + dd;
-  
-//     return date.replace(pattern, replacement);
-//   }
-  
-//   alert(formatDate("February 04, 2011 12:00:00"));
+    for(i=0; i < timeBlock.length; i++){
+    console.log(timeBlock[i])
+    }
+    if(timeBlock[0]){
+        
+    }
+
+}
+
+function backgroundColorEdit(){
+    if (present == time){
+        document.getElementsByClassName("backgroundTool").style.backgroundColor = "#ff0000";
+    }else if (present < time){
+        document.getElementsByClassName("backgroundTool").style.backgroundColor = "#d3d3d3";
+    }else 
+    {
+        document.getElementsByClassName("backgroundTool").style.backgroundColor = "#90ee90";
+    }
+}
+
+setClasses()   
+
+
+
+
+// javascript set class
+
 
