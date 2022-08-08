@@ -2,13 +2,23 @@ var container = document.querySelector(".container");
 var currentDay = document.getElementById("#currentDay");
 var timeBlock = document.querySelector(".time-block")
 var saveBtn = document.querySelector(".saveBtn")
-var time 
+var textArea = document.querySelector("textarea")
 
 
 var today = moment() 
 $("#currentDay").text(today.format("MMMM Do, YYYY"))
 
-saveBtn.addEventListener("click")
+
+function textArea() {
+    
+}
+
+
+
+saveBtn.addEventListener("click" , function(event){
+    event.preventDefault();
+
+})
 
 
 function timeBlock(){
@@ -20,7 +30,7 @@ for(i=9; i => 5; i++);
 } 
 
      
-// }
+
 
 // document.getElementById('table_to_highlight')
 //             .addEventListener('click', function(item) {
@@ -48,36 +58,36 @@ for(i=9; i => 5; i++);
 //                     row.classList.add('highlight');
 
 
-function formatDate(date) {
-    var d = new Date(date);
-    var hh = d.getHours();
-    var m = d.getMinutes();
-    var s = d.getSeconds();
-    var dd = "AM";
-    var h = hh;
-    if (h >= 12) {
-      h = hh - 12;
-      dd = "PM";
-    }
-    if (h == 0) {
-      h = 12;
-    }
-    m = m < 10 ? "0" + m : m;
+// function formatDate(date) {
+//     var d = new Date(date);
+//     var hh = d.getHours();
+//     var m = d.getMinutes();
+//     var s = d.getSeconds();
+//     var dd = "AM";
+//     var h = hh;
+//     if (h >= 12) {
+//       h = hh - 12;
+//       dd = "PM";
+//     }
+//     if (h == 0) {
+//       h = 12;
+//     }
+//     m = m < 10 ? "0" + m : m;
   
-    s = s < 10 ? "0" + s : s;
+//     s = s < 10 ? "0" + s : s;
   
-    /* if you want 2 digit hours:
-    h = h<10?"0"+h:h; */
+//     /* if you want 2 digit hours:
+//     h = h<10?"0"+h:h; */
   
-    var pattern = new RegExp("0?" + hh + ":" + m + ":" + s);
+//     var pattern = new RegExp("0?" + hh + ":" + m + ":" + s);
   
-    var replacement = h + ":" + m;
-    /* if you want to add seconds
-    replacement += ":"+s;  */
-    replacement += " " + dd;
+//     var replacement = h + ":" + m;
+//     /* if you want to add seconds
+//     replacement += ":"+s;  */
+//     replacement += " " + dd;
   
-    return date.replace(pattern, replacement);
-  }
+//     return date.replace(pattern, replacement);
+//   }
   
-  alert(formatDate("February 04, 2011 12:00:00"));
+//   alert(formatDate("February 04, 2011 12:00:00"));
 
